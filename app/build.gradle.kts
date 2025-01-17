@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.coil)
     implementation(libs.room)
+    implementation(libs.google.fonts)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
