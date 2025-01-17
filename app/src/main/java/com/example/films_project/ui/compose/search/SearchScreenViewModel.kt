@@ -12,6 +12,8 @@ import kotlinx.coroutines.launch
 
 class SearchScreenViewModel(private val movieRepository: MovieRepository): ViewModel() {
     val movies: StateFlow<MoviesList?> = movieRepository.getMoviesListFlow
+//    private val favourites: StateFlow<List<favourite>?> = favouriteRepository.getFavouritesListFlow
+
     fun searchMovies(input: String){
         viewModelScope.launch {
             movieRepository.getMovie(input)
@@ -19,6 +21,10 @@ class SearchScreenViewModel(private val movieRepository: MovieRepository): ViewM
         }
 
     }
+
+//    fun isFavorite(movie: Movie): Boolean{
+////        return
+//    }
 }
 
 //val movies by viewModel.movies.collectAsState()

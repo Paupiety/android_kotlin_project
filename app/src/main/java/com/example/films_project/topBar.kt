@@ -9,6 +9,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun TopBar(modifier: Modifier) {
@@ -17,10 +20,11 @@ Row(
         .fillMaxWidth(), horizontalArrangement = Arrangement.Center
 ) {
     Text(
-    text = "Your library",
+    text = "Ma librairie",
     color = Color.White,
     fontWeight = FontWeight.Bold,
-    textAlign = TextAlign.Center
+    textAlign = TextAlign.Center,
+        fontSize = 24.sp
 ) }
 
 
