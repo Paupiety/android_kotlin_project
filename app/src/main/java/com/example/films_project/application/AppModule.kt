@@ -1,11 +1,16 @@
 package com.example.films_project.application
 
+import com.example.films_project.Data.Repository.MovieFavRepository
+import com.example.films_project.Data.Repository.MovieFavRepositoryimpl
 import com.example.films_project.network.ApiMovies
 import com.example.films_project.repository.MovieRepository
 import com.example.films_project.repository.MovieRepositoryImpl
+import com.example.films_project.ui.compose.HomeScreen.HomeScreenViewModel
 import com.example.films_project.ui.compose.search.SearchScreenViewModel
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import org.koin.android.ext.koin.androidApplication
+import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -14,10 +19,19 @@ import java.util.concurrent.TimeUnit
 
 val appModule = module {
     single<MovieRepository> {
-        MovieRepositoryImpl(get())
+        MovieRepositoryImpl(get(), androidContext())
     }
+
+    single<MovieFavRepository> {
+        MovieFavRepositoryimpl(androidContext())
+    }
+
+
     viewModel{
         SearchScreenViewModel(get())
+    }
+    viewModel{
+        HomeScreenViewModel(get())
     }
 
     single {

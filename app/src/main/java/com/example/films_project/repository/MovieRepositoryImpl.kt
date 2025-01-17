@@ -1,13 +1,14 @@
 package com.example.films_project.repository
 
 import Movie
+import android.content.Context
 import com.example.films_project.MoviesList
 import com.example.films_project.network.ApiMovies
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-class MovieRepositoryImpl(private val apiMovies: ApiMovies): MovieRepository {
+class MovieRepositoryImpl(private val apiMovies: ApiMovies, context: Context): MovieRepository {
     private val movieListFlow = MutableStateFlow<MoviesList?>(null)
     override  val getMoviesListFlow: StateFlow<MoviesList?> = movieListFlow.asStateFlow()
 

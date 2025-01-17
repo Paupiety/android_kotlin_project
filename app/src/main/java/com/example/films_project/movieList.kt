@@ -12,9 +12,10 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.films_project.Data.Entity.MovieFav
 
 @Composable
-fun MovieList(movies: List<Movie>) {
+fun MovieList(movies: List<MovieFav>) {
     LazyVerticalGrid (
         columns = GridCells.Fixed(2),
         modifier = Modifier.fillMaxWidth(),

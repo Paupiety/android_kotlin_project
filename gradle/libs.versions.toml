@@ -13,6 +13,8 @@ koinBom = "4.0.1"
 retrofit = "2.9.0"
 converter-gson = "2.9.0"
 coil = "2.1.0"
+roomCommon = "2.6.1"
+roomKtx = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,6 +36,8 @@ koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", versi
 retrofit2 = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit"}
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converter-gson"}
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil"}
+androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
