@@ -19,19 +19,21 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
+import com.example.films_project.ui.theme.PinkPrimary
+import com.example.films_project.ui.theme.PinkSecondary
 
 @Composable
 fun SearchBar(input: String, onInputChange: (String) -> Unit, onSearch: () -> Unit, modifier : Modifier = Modifier){
     Row(
         modifier = Modifier.padding(22.dp)
-            .background(Color.DarkGray, shape = RoundedCornerShape(50))
+            .background(PinkPrimary, shape = RoundedCornerShape(50))
             .clip(RoundedCornerShape(50))
             .padding(horizontal = 15.dp),
         verticalAlignment = Alignment.CenterVertically) {
         Icon(
             imageVector = Icons.Default.Search,
             contentDescription = "Search",
-            tint = Color.Gray,
+            tint = PinkSecondary,
             modifier = Modifier.size(28.dp)
         )
         TextField(

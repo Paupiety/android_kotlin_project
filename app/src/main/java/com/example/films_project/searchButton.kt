@@ -14,8 +14,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.films_project.ui.theme.PinkPrimary
+import com.example.films_project.ui.theme.PinkSecondary
+import com.example.films_project.ui.theme.poppins
+import java.time.format.TextStyle
 
 @Composable
 fun SearchButton(onClick: () -> Unit, name: String, image: ImageVector? = null, modifier: Modifier? = null) {
@@ -32,12 +37,16 @@ fun SearchButton(onClick: () -> Unit, name: String, image: ImageVector? = null, 
                 Icon(
                     imageVector = image,
                     contentDescription = "icone",
-                    tint = Color.White,
+                    tint = PinkSecondary,
                     modifier = Modifier.size(28.dp)
                 )
             }
 
-            Text(name, color = Color.White, )
+            Text(name, color = PinkSecondary,
+                style = androidx.compose.ui.text.TextStyle(
+                    fontFamily = poppins,
+                    fontSize = 18.sp
+                ))
         }
     }
 
