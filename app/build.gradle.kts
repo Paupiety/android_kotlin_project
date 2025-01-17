@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.retrofit2)
     implementation(libs.converter.gson)
     implementation(libs.coil)
+    implementation(libs.room)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
